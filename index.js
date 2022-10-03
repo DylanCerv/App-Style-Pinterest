@@ -53,6 +53,6 @@ app.use(express.static(path.join(__dirname, 'src/public')));
 
 
 // Iniciar el servidor
-app.listen(3000, ()=>{
+app.listen(app.get('port'), ()=>{
     console.log(`Servidor corriendo en el puerto ${app.get('port')}`);
 });
