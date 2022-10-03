@@ -1,0 +1,38 @@
+<%- include('template/head.ejs', {titleH: '- Subir Imagen'}) %>
+<body>
+    <%- include('template/nav.ejs') %>
+    
+    <div class="body upload">
+        <form action="/form-upload" method="post" enctype="multipart/form-data">
+            <div class="contentP">
+                <div class="container-imgP">
+                    <div class="div" id="img_default" onclick="document.getElementById('img').click()">
+                        <div class="entrecortado">
+                            <svg class="gUZ ztu U9O kVc" height="24" width="24" viewBox="0 0 24 24" aria-label="Añade una imagen o un vídeo" role="img"><path d="M24 12c0-6.627-5.372-12-12-12C5.373 0 0 5.373 0 12s5.373 12 12 12c6.628 0 12-5.373 12-12zm-10.767 3.75a1.25 1.25 0 0 1-2.5 0v-3.948l-1.031 1.031a1.25 1.25 0 0 1-1.768-1.768L12 7l4.066 4.065a1.25 1.25 0 0 1-1.768 1.768l-1.065-1.065v3.982z"></path></svg>
+                            <h3>Haz click y selecciona una imagen</h3>
+                        </div>
+                        <p>Se recomienda usar archivos .jpg de alta calidad de menos de 20 MB</p>
+                    </div>
+                    <img src="" alt="" id="img_foto" onclick="document.getElementById('img').click()">
+                    <input required onchange="view(event)" type="file" class="form-control" name="img" id="img" hidden>
+                    <!-- style="cursor: pointer; height: 100%; opacity: 0; position: absolute; width: 100%; left: 0px; top: 0px; font-size: 0px;" -->
+                </div>
+                <div class="container-texts">
+                    <div class="container-textsP">
+                        <div class="inputs">
+                            <input type="text" name="title" id="title" placeholder="Añade un titulo" maxlength="100">
+                            <input type="text" name="descripcion" id="descripcion" placeholder="Explica en que consiste" maxlength="500">
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <button type="submit" class="delete-pin">Subir</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    
+
+<%- include('template/footer.ejs') %>
+

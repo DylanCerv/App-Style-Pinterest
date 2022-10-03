@@ -1,0 +1,21 @@
+<%- include('template/head.ejs', {titleH: '- Inicio'}) %>
+<body>
+    <%- include('template/nav.ejs') %>
+        <div class="body">
+            <div class="grid-container">
+                <% imagenes.forEach((img)=>{ %>
+                    <div class="mult">
+                        <a href="/img/<%= img._id %>">
+                            <img src="<%= img.ruta %>" alt="">
+                        </a>
+                        <div class="titulo">
+                            <h5 class="card-title">
+                                <%= img.titulo %>
+                            </h5>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+                    
+<%- include('template/footer.ejs') %>
