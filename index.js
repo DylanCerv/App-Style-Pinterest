@@ -15,13 +15,13 @@ const { format } = require('timeago.js');
 
 // Inicializaciones
 const app = express();
-require('./database.js');
+require('./src/database.js');
 
 
 // Configuracion
 app.set('port', process.env.PORT || 3000);
 
-app.set('views', path.join(__dirname, 'views')); //indica en que directorio esta src y entra en la carpeta view
+app.set('views', path.join(__dirname, 'src/views')); //indica en que directorio esta src y entra en la carpeta view
 app.set('view engine', 'ejs'); // MOTOR DE PLANTILLA 'EJS'
 // console.log(path.join(__dirname, 'views'))
 
@@ -32,7 +32,7 @@ app.use(
     ); /** ayuda a entender lo que es enviado por los formularios **/
 
 const Storange = multer.diskStorage({
-    destination: path.join(__dirname, 'public/img/uploads'),
+    destination: path.join(__dirname, 'src/public/img/uploads'),
     filename: (req, file, cb, filename)=>{
         cb(null, uuidv4() + path.extname(file.originalname));
     }
@@ -46,10 +46,10 @@ app.use((req, res, next)=>{
 });
 
 // Rutas
-app.use(require('./routes/index.js'));
+app.use(require('./src/routes/index.js'));
 
 // Archivos estaticos
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'src/public')));
 
 
 // Iniciar el servidor
