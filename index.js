@@ -19,7 +19,7 @@ require('./src/database.js');
 
 
 // Configuracion
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 4000);
 
 app.set('views', path.join(__dirname, 'src/views')); //indica en que directorio esta src y entra en la carpeta view
 app.set('view engine', 'ejs'); // MOTOR DE PLANTILLA 'EJS'
