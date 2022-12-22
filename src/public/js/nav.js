@@ -12,7 +12,7 @@ if (URLactual == '/') {
     btnHome.classList.remove('mark');
     btnAdd.classList.remove('mark');
 
-}else if(URLactual == '/form-upload'){
+}else if(URLactual == '/upload'){
     btnHome.classList.remove('mark');
     btnAdd.classList.add('mark');
 }

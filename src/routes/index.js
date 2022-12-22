@@ -25,12 +25,12 @@ router.get('/', async (req, res)=>{
     // res.send('pagina inicial');
 });
 
-router.get('/form-upload', (req, res)=>{
+router.get('/upload', (req, res)=>{
     // res.send('Formulario de subida de datos');
     res.render('upload.ejs');
 });
 
-router.post('/form-upload', async (req, res)=>{
+router.post('/upload', async (req, res)=>{
     // console.log(req);
 
     // console.log(resultCloudinary);
