@@ -21,7 +21,7 @@ const cloudinary = require('cloudinary');
 router.get('/', async (req, res)=>{
     const imagenes = await img.find();
     console.log(imagenes);
-    res.render('index.ejs', { imagenes: imagenes });
+    res.render('upload.ejs', { imagenes: imagenes });
     // res.send('pagina inicial');
 });
 
